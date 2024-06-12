@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<catalogo_de_filme.Models>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -20,15 +21,25 @@
     <h2>SERIES MAIS ASSISTIDAS</h2>
     <div class="containerHomePage">
         <div class="cards">
-            <div class="card">
-                <img src="~/logoSpfc.png" width="150px" height="100px" />
-            </div>
-            <div class="card">
-                <img src="~/logoSpfc.png" width="150px" height="100px" />
-            </div>
-            <div class="card">
-                <img src="~/logoSpfc.png" width="150px" height="100px" />
-            </div>
+            @foreach (var card in Model)
+            {
+                <div class="card">
+                    <img src="@card.ImageUrl"/>
+                    <h5 class="card-title">@card.Title</h5>
+                    <p class="card-text">@card.Description</p>
+                </div>
+                <div class="card">
+                    <img src="@card.ImageUrl"/>
+                    <h5 class="card-title">@card.Title</h5>
+                    <p class="card-text">@card.Description</p>
+                </div>
+                <div class="card">
+                    <img src="@card.ImageUrl"/>
+                    <h5 class="card-title">@card.Title</h5>
+                    <p class="card-text">@card.Description</p>
+                </div>
+            }
         </div>
     </div>
 </div>
+
