@@ -7,16 +7,27 @@
     <h2>FILMES MAIS ASSISTIDOS</h2>
     <div class="containerHomePage">
         <div class="cards">
-            <div class="card">
-                <img src="~/logoSpfc.png" width="150px" height="100px" />
-            </div>
-            <div class="card">
-                <img src="~/logoSpfc.png" width="150px" height="100px" />
-            </div>
-            <div class="card">
-                <img src="~/logoSpfc.png" width="150px" height="100px" />
-            </div>
-        </div>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (CardModel card in Model)
+                {
+                    <div class="card">
+                        <img src="@card.ImageUrl" />
+                        <h5 class="card-title">@card.Title</h5>
+                        <p class="card-text">@card.Description</p>
+                    </div>
+                    <div class="card">
+                        <img src="@card.ImageUrl" />
+                        <h5 class="card-title">@card.Title</h5>
+                        <p class="card-text">@card.Description</p>
+                    </div>
+                    <div class="card">
+                        <img src="@card.ImageUrl" />
+                        <h5 class="card-title">@card.Title</h5>
+                        <p class="card-text">@card.Description</p>
+                    </div>
+                }
+            }
     </div>
     <h2>SERIES MAIS ASSISTIDAS</h2>
     <div class="containerHomePage">
