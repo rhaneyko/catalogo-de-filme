@@ -1,4 +1,4 @@
-﻿using catalogo_de_filme.Models;
+﻿using catalogo_de_filme.Models.Card;
 using Microsoft.AspNetCore.Mvc;
 
 namespace catalogo_de_filme.Controllers
@@ -9,9 +9,9 @@ namespace catalogo_de_filme.Controllers
         {
             var cards = new List<Card>
             {
-                new Card {Id = 1, Title = "Card 1", Description = "Descrição do Card", ImageUrl = ""},
-                new Card {Id = 2, Title = "Card 2", Description = "Descrição do Card", ImageUrl = ""},
-                new Card {Id = 3, Title = "Card 3", Description = "Descrição do Card", ImageUrl = ""}
+                new Card {Id = 1, Title = "Card 1", Description = "Descrição do Card", ImageUrl = "~/logoSpfc.png"},
+                new Card {Id = 2, Title = "Card 2", Description = "Descrição do Card", ImageUrl = "~/logoSpfc.png"},
+                new Card {Id = 3, Title = "Card 3", Description = "Descrição do Card", ImageUrl = "~/logoSpfc.png"}
             };
             return View(cards);
         }
