@@ -1,4 +1,4 @@
-﻿@model IEnumerable<catalogo_de_filme.Models>
+﻿@model IEnumerable<catalogo_de_filme.Models.CardModel>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -21,8 +21,10 @@
     <h2>SERIES MAIS ASSISTIDAS</h2>
     <div class="containerHomePage">
         <div class="cards">
-            @foreach (var card in Model)
-            {
+             @if (Model != null && Model.Any())
+             {
+              @foreach (CardModel card in Model)
+             {
                 <div class="card">
                     <img src="@card.ImageUrl"/>
                     <h5 class="card-title">@card.Title</h5>
@@ -38,6 +40,7 @@
                     <h5 class="card-title">@card.Title</h5>
                     <p class="card-text">@card.Description</p>
                 </div>
+            }
             }
         </div>
     </div>

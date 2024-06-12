@@ -1,6 +1,6 @@
-﻿namespace catalogo_de_filme.Models.Card
+﻿namespace catalogo_de_filme.Models
 {
-    public class Card
+    public class CardModel
     {
         public int Id { get; set; }
         public string Title { get; set; }
