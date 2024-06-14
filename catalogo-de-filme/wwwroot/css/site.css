@@ -20,33 +20,3 @@ html {
 body {
   margin-bottom: 60px;
 }
-
-.containerHomePage{
-    display: flex; 
-    height: 500px;
-    background-color: red; 
-
-    justify-content: center;
-    align-items: center;
-
-}
-
-.cards{
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.card{
-    height: 350px;
-    width: 350px;
-
-    align-items: center;
-
-    margin: 10px;
-
-    background-color: white;
-
-    border-radius: 10px;
-}

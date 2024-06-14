@@ -1,4 +1,4 @@
-﻿@model IEnumerable<catalogo_de_filme.Models.CardModel>
+﻿@model IEnumerable<catalogo_de_filme.Models.Card>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -9,18 +9,8 @@
         <div class="cards">
             @if (Model != null && Model.Any())
             {
-                @foreach (CardModel card in Model)
+                @foreach (var card in Model)
                 {
-                    <div class="card">
-                        <img src="@card.ImageUrl" />
-                        <h5 class="card-title">@card.Title</h5>
-                        <p class="card-text">@card.Description</p>
-                    </div>
-                    <div class="card">
-                        <img src="@card.ImageUrl" />
-                        <h5 class="card-title">@card.Title</h5>
-                        <p class="card-text">@card.Description</p>
-                    </div>
                     <div class="card">
                         <img src="@card.ImageUrl" />
                         <h5 class="card-title">@card.Title</h5>
@@ -31,23 +21,13 @@
     </div>
     <h2>SERIES MAIS ASSISTIDAS</h2>
     <div class="containerHomePage">
-        <div class="cards">
+        <div class="card-container">
              @if (Model != null && Model.Any())
              {
-              @foreach (CardModel card in Model)
+             @foreach (var card in Model)
              {
-                <div class="card">
-                    <img src="@card.ImageUrl"/>
-                    <h5 class="card-title">@card.Title</h5>
-                    <p class="card-text">@card.Description</p>
-                </div>
-                <div class="card">
-                    <img src="@card.ImageUrl"/>
-                    <h5 class="card-title">@card.Title</h5>
-                    <p class="card-text">@card.Description</p>
-                </div>
-                <div class="card">
-                    <img src="@card.ImageUrl"/>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"  src="@card.ImageUrl" />
                     <h5 class="card-title">@card.Title</h5>
                     <p class="card-text">@card.Description</p>
                 </div>
@@ -55,5 +35,6 @@
             }
         </div>
     </div>
+</div>
 </div>
 
